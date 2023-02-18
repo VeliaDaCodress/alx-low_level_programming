@@ -12,8 +12,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar(i);
-		i++;
+		putchar(i++ + '0');
 	}
 	printf("\n");
 	return (0);
