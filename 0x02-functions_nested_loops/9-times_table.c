@@ -23,7 +23,8 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(multi + '0');
-				_putchar(',');
+				if (j != 9)
+					_putchar(',');
 			}
 			else
 			{
@@ -34,11 +35,11 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(first_digit + '0');
 				_putchar(last_digit + '0');
-				_putchar(',');
+				if (j != 9)
+					_putchar(',');
 			}
 			j++;
 		}
-		_putchar('$');
 		_putchar('\n');
 		i++;
 	}
