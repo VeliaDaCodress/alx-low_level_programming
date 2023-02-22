@@ -20,8 +20,11 @@ void times_table(void)
 			multi = i * j;
 			if (multi / 10 == 0)
 			{
-				_putchar(' ');
-				_putchar(' ');
+				if (j != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar(multi + '0');
 				if (j != 9)
 					_putchar(',');
@@ -32,7 +35,8 @@ void times_table(void)
 
 				first_digit = multi / 10;
 				last_digit = multi % 10;
-				_putchar(' ');
+				if (j != 0)
+					_putchar(' ');
 				_putchar(first_digit + '0');
 				_putchar(last_digit + '0');
 				if (j != 9)
