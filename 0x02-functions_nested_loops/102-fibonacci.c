@@ -11,18 +11,21 @@ int main(void)
 	int i;
 	int first;
 	int second;
+	int next;
 
 	first = 1;
 	second = 2;
 
-	for (i = 0; i < 50; i++)
+	printf("%d, %d", first, second);
+	for (i = 0; i < 48; i++)
 	{
-		if (i < 49)
-			printf("%d, %d,", first, second);
+		next = first + second;
+		if (i == 47)
+			printf("%d", next);
 		else
-			printf("%d, %d", first, second);
-		first = first + second;
-		second = first + second;
+			printf(", %d, ", next);
+		first = second;
+		second = next;
 	}
 	printf("\n");
 	return (0);
