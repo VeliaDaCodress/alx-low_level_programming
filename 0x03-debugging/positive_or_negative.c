@@ -4,17 +4,13 @@
 
 /**
  * main - The main is the entry point of the function
- * int n - Represents a randomly generated number
+ * @n - Represents a randomly generated number
  *
  * Return: always 0
  */
 
-int main(void)
+int positive_or_negative(int n)
 {
-	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
