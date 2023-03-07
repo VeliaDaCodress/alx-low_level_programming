@@ -5,6 +5,8 @@
 * @s: pointer variable
 * @b: character
 * @n: number of bytes
+*
+* Return: a char result of the processing
 */
 
 char *_memset(char *s, char b, unsigned int n)
