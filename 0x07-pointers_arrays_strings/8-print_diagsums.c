@@ -8,15 +8,25 @@
 
 void prjnt_diagsums(int *a, int size)
 {
-	int sum1, sum2, y;
+	int sum1, sum2, y, z;
 
 	sum1 = 0;
 	sum2 = 0;
 	for (y = 0; y < size; y++)
 	{
-		sum1 = sum2 + a[y * size + y];
+		for (z = 0, z < size; z++)
+		{
+			if (y == z)
+				sum1 += a[y][z];	
+		}
 	}
-	for (y = size - 1; y >= 0; y--)
-		sum2 += a[y * size + (size - y - 1)];
+	for (y = 0; y < size; y++)
+	{
+		for (z = 0; z < size; z++)
+		{
+			if (y + z == size)
+				sum2 += a[y][z];
+		}
+	}
 	printf("%d, %d\n", sum1, sum2);
 }
