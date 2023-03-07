@@ -17,7 +17,7 @@ void prjnt_diagsums(int *a, int size)
 		for (z = 0, z < size; z++)
 		{
 			if (y == z)
-				sum1 += a[y][z];	
+				sum1 += *(a[y][z]);	
 		}
 	}
 	for (y = 0; y < size; y++)
@@ -25,7 +25,7 @@ void prjnt_diagsums(int *a, int size)
 		for (z = 0; z < size; z++)
 		{
 			if (y + z == size)
-				sum2 += a[y][z];
+				sum2 += *(a[y][z]);
 		}
 	}
 	printf("%d, %d\n", sum1, sum2);
