@@ -2,32 +2,28 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input 
- */
+* print_diagsums - Entry point
+* @a: input
+* @size: input
+*/
 
-void prjnt_diagsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
-	int sum1, sum2, y, z;
+	int sum1, sum2, y;
 
 	sum1 = 0;
 	sum2 = 0;
+
 	for (y = 0; y < size; y++)
 	{
-		for (z = 0; z < size; z++)
-		{
-			if (y == z)
-				sum1 += *(a[y][z]);	
-		}
+		sum1 = sum1 + a[y * size + y];
 	}
-	for (y = 0; y < size; y++)
+
+	for (y = size - 1; y >= 0; y--)
 	{
-		for (z = 0; z < size; z++)
-		{
-			if (y + z == size)
-				sum2 += *(a[y][z]);
-		}
+		sum2 += a[y * size + (size - y - 1)];
 	}
+
 	printf("%d, %d\n", sum1, sum2);
 }
+
