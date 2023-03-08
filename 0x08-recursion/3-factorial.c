@@ -4,6 +4,7 @@
 *factorial - This function calculates and return the factorial of a
 * variable
 * @n: We are solving for the factorial of this parameter
+* Return: integer value of the factorial of n
 */
 int factorial(int n)
 {
