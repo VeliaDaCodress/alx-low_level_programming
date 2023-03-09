@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * actual_sqrt-recursion - Recurses to find natural sqrt of num
+ * actual_sqrt_recursion - Recurses to find natural sqrt of num
  * @n: number whose sqrt we need
  * @i: iteration counter
  * Return:the resulting sqrt
