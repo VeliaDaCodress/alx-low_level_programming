@@ -3,7 +3,7 @@
 
 /**
  * str_concat - concatenates two strings to a memory
- * @si: first string
+ * @s1: first string
  * @s2: second string
  * Return: new pointet to the created memory
  */
