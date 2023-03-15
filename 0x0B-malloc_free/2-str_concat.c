@@ -19,18 +19,23 @@ char *str_concat(char *s1, char *s2)
 
 	count = 0;
 	count2 = 0;
-	while (s1[count])
+	if (s1 == NULL)
+		S1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[count] != '\0')
 		count++;
-	while (s2[count2])
+	while (s2[count2] != '\0')
 	{
 		count2++;
 	}
-	new_mem = malloc(sizeof(char) * (count + count2));
+	new_mem = malloc(sizeof(char) * (count + count2 + 1));
 	if (new_mem == NULL)
-		return (new_mem);
-	for (i = 0; i < count; i++)
+		return (NULL);
+	for (i = 0; s1[i] != '\0'; i++)
 		new_mem[i] = s1[i];
-	for (i = count; i < (count + count2); i++)
-		new_mem[i] = s2[i - count];
+	for (i = 0; s2[i] != '\0'; i++)
+		new_mem[i + count] = s2[i];
+	new_mem[count + count2] = '\0';
 	return (new_mem);
 }
