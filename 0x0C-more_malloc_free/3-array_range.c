@@ -12,9 +12,9 @@ int *array_range(int min, int max)
 	int *ptr, difference, i;
 
 	difference = (max - min) + 1;
-	if (difference < 0)
+	if (min > max)
 		return (NULL);
-	ptr = malloc(difference);
+	ptr = malloc(sizeof(int) * difference);
 	if (ptr == NULL)
 		return (NULL);
 	for (i = min; i <= max; i++)
