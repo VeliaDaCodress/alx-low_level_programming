@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define __FILE__
+#define FILE_NAME __FILE__
 
 /**
  * main - Main code of the function
@@ -10,6 +10,6 @@
 
 int main(void)
 {
-	printf("%s", __FILE__);
+	printf("%s\n", FILE_NAME);
 	return (0);
 }
