@@ -9,7 +9,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	(*f)(name);
 }
 
 /**
@@ -19,7 +19,7 @@ void print_name(char *name, void (*f)(char *))
 
 int main(void)
 {
-	print_name("joseph", print_name_as_is());
-	print_name("joseph", print_name_uppercase());
+	print_name("joseph", (*print_name_as_is)());
+	print_name("joseph", (*print_name_uppercase)());
 	return (0);
 }
