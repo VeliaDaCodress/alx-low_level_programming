@@ -11,15 +11,3 @@ void print_name(char *name, void (*f)(char *))
 {
 	(*f)(name);
 }
-
-/**
- * main - entry point
- * Return: always 0
- */
-
-int main(void)
-{
-
-	print_name("Bob", print_name_as_is);
-	print_name("Bob Dylan", print_name_uppercase);
-}
