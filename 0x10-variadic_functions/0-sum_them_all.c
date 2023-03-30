@@ -2,7 +2,7 @@
 
 /**
  * sum_them_all - This function sums up all thw arguments
- * n: the xount of the numbers
+ * @n: the xount of the numbers
  * Return: integer value of the sum
  */
 
@@ -16,5 +16,5 @@ int sum_them_all(const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 		sum += va_arg;
 	va_end;
-	return sum;
+	return (sum);
 }
