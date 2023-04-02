@@ -14,8 +14,9 @@ int _strlen(char *str)
 	n = 0;
 	while (str[n] != '\0')
 		n++;
-	return (n)
+	return (n);
 }
+
 /**
  * add_node - this function adds a nodr to the head of a linked list
  * @head: the address of the first element of the linked list
@@ -31,7 +32,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (old_head == NULL)
 		return (NULL);
 	old_head->str = strdup(str);
-	old_head->len = n
+	old_head->len = n;
 	old_head->next = *head;
 	*head = old_head;
 	return (old_head);
