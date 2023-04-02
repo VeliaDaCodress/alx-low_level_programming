@@ -8,8 +8,6 @@
 
 list_t *_last_node(list_t **h)
 {
-	list_t tail;
-
 	while (h != NULL)
 	{
 		if (h->next == NULL)
@@ -22,20 +20,35 @@ list_t *_last_node(list_t **h)
  * add_node_end - Add a node to the end of a singly linked list
  * @head: head of the singly linked list
  * @str: the string or valie of the node
- * Return: the address of thw new node
+ * Return: the address of the new string
  */
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t l_node, pl_node;
+   list_t *new, *tmp;
 
-	l_node = malloc(sizeof(list_t));
-	if (l_node == NULL)
-		return (NULL);
-	l_node->str = strdup(str);
-	l_node->len = _strlen(str);
-	l_node->next = NULL;
-	pl_node = _last_node(head);
-	pl_node->next = l_node;
-	return (l_node);
+
+   if (str == NULL)
+       return (NULL);
+   new = malloc(sizeof(list_t));
+   if (new == NULL)
+       return (NULL);
+   new->str = strdup(str);
+   if (new->str == NULL)
+   {
+       free(new);
+       return (NULL);
+   }
+   new->len = _strlen(new->str);
+   new->next = NULL;
+   if (*head == NULL)
+   {
+       *head = new;
+       return (new);
+   }
+   tmp = *head;
+   while (tmp->next)
+       tmp = tmp->next;
+   tmp->next = new;
+   return (new);
 }
