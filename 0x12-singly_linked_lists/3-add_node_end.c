@@ -12,7 +12,7 @@ int _strlen(const char *s)
 	int i;
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
@@ -27,7 +27,6 @@ int _strlen(const char *s)
 list_t *add_node_end(list_t **head, const char *str)
 {
    list_t *new, *tmp;
-
 
    if (str == NULL)
        return (NULL);
@@ -44,12 +43,12 @@ list_t *add_node_end(list_t **head, const char *str)
    new->next = NULL;
    if (*head == NULL)
    {
-       *head = new;
-       return (new);
+	   *head = new;
+	   return (new);
    }
    tmp = *head;
    while (tmp->next)
-       tmp = tmp->next;
+	   tmp = tmp->next;
    tmp->next = new;
    return (new);
 }
