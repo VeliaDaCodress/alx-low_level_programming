@@ -1,19 +1,20 @@
 #include "lists.h"
+#include <string.h>
 
 /**
- * _last_node - This function returns the pointer
- * @h: pointer to the head of the linked list
- * Return: pointer to the tail
+ * _strlen - get the length of a string
+ * @s: the string whose length we seek
+ * Return: interger value for the length of string
  */
 
-list_t *_last_node(list_t **h)
+int _strlen(const char *s)
 {
-	while (h != NULL)
-	{
-		if (h->next == NULL)
-			return (h);
-		*h = h->next;
-	}
+	int i;
+
+	i = 0;
+	while(s[i] != '\0')
+		i++;
+	return (i);
 }
 
 /**
