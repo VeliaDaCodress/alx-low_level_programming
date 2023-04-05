@@ -6,16 +6,15 @@
  * Return: sum of listint data
  */
 
-int sum_listint(const listint_t *h)
+int sum_listint(listint_t *head)
 {
 	int sum;
-	listint_t *temp = head;
 
 	sum = 0;
-	while (temp)
+	while (head)
 	{
-		sum += temp->n;
-		temp = temp->next;
+		sum += head->n;
+		head = head->next;
 	}
 	return (sum);
 }
