@@ -2,7 +2,7 @@
 
 /**
  * add_nodeint - function that adds node to the head
- * @head - a pointer to pointer to head of linked list
+ * @head: a pointer to pointer to head of linked list
  * @n: integer value to be data of new head
  * Return: pointer to the new head
  */
