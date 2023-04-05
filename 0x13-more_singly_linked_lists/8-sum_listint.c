@@ -2,7 +2,7 @@
 
 /**
  * sum_listint - Print list int
- * @h: head of the stringly linked list
+ * @head: head of the singly linked list
  * Return: sum of listint data
  */
 
